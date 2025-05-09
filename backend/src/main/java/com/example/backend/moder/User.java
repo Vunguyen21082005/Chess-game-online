@@ -14,11 +14,10 @@ import lombok.Setter;
 @Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-   private String user_id;
-    String username;
-    String email;
-    String password_hash;
-    String created_at;
-   String role;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   private Integer user_id;
+    private String username;
+    private String email;
+    private String password;
+    private String phone_number;
 }
